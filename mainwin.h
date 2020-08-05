@@ -1,9 +1,13 @@
-#ifndef MAINWIN_H
+﻿#ifndef MAINWIN_H
 #define MAINWIN_H
 
 #include <QMainWindow>
 #include<QTextEdit>
-
+#include <QCloseEvent>
+#include<QDialog>
+#include <QLineEdit>
+#include<QVBoxLayout>
+#include<QGridLayout>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWin; }
 QT_END_NAMESPACE
@@ -17,11 +21,23 @@ public:
     ~MainWin();
 
     static QString path;
+    static bool saveAs;
     void openFile();
     void saveFile();
     void newFile();
+    void saveAsFile();
+    void openSearch();
+//    void showError(QString message);
+    bool m_isTextChanged;
+    void initMainEditor();
+    void onTextChanged();
+    void checkChanged();
+    int showQueryMessage(QString message);
+    void closeEvent(QCloseEvent *ev);
 private:
     Ui::MainWin *ui;
-    QTextEdit *textEd;
+    QTextEdit textEd;
+    QDialog *findDlg;
+    QLineEdit *findLineEdit;
 };
 #endif // MAINWIN_H

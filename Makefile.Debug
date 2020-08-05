@@ -15,7 +15,7 @@ CC            = cl
 CXX           = cl
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -DWIN64 -DQT_DEPRECATED_WARNINGS -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -Zi -MDd -W3 -w44456 -w44457 -w44458 /Fddebug\mywin.vc.pdb $(DEFINES)
-CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc /Fddebug\mywin.vc.pdb $(DEFINES)
+CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus /utf-8 -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc /Fddebug\mywin.vc.pdb $(DEFINES)
 INCPATH       = -I. -IC:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include -IC:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets -IC:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui -IC:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtANGLE -IC:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore -Idebug -I. -I/include -IC:\Qt\Qt5.12.8\5.12.8\msvc2017_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /DEBUG /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
@@ -153,7 +153,7 @@ compiler_moc_predefs_make_all: debug\moc_predefs.h
 compiler_moc_predefs_clean:
 	-$(DEL_FILE) debug\moc_predefs.h
 debug\moc_predefs.h: C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\mkspecs\features\data\dummy.cpp
-	cl -BxC:\Qt\Qt5.12.8\5.12.8\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\mkspecs\features\data\dummy.cpp 2>NUL >debug\moc_predefs.h
+	cl -BxC:\Qt\Qt5.12.8\5.12.8\msvc2017_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus /utf-8 -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\mkspecs\features\data\dummy.cpp 2>NUL >debug\moc_predefs.h
 
 compiler_moc_header_make_all: debug\moc_mainwin.cpp
 compiler_moc_header_clean:
@@ -265,9 +265,18 @@ debug\moc_mainwin.cpp: mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qicon.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qpen.h \
 		debug\moc_predefs.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\bin\moc.exe
-	C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/QT/wedget/mywin/debug/moc_predefs.h -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/mkspecs/win32-msvc -ID:/QT/wedget/mywin -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtGui -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" mainwin.h -o debug\moc_mainwin.cpp
+	C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/QT/wedget/QtWindow_NotePad2020/debug/moc_predefs.h -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/mkspecs/win32-msvc -ID:/QT/wedget/QtWindow_NotePad2020 -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtGui -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" mainwin.h -o debug\moc_mainwin.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -399,6 +408,15 @@ debug\main.obj: main.cpp mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qicon.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qpen.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QApplication \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qapplication.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\qcoreapplication.h \
@@ -514,6 +532,15 @@ debug\mainwin.obj: mainwin.cpp mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtouchdevice.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qtabwidget.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qicon.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QTextEdit \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qtextedit.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qframe.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextdocument.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextoption.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextcursor.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextformat.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qpen.h \
 		ui_mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QMenuBar \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qmenubar.h \
@@ -532,15 +559,6 @@ debug\mainwin.obj: mainwin.cpp mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qstatusbar.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QLabel \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qframe.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QTextEdit \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qtextedit.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextdocument.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextoption.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextcursor.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextformat.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qpen.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QDialog \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qdialog.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QMessageBox \
@@ -550,7 +568,9 @@ debug\mainwin.obj: mainwin.cpp mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\qdir.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\qfileinfo.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\QBuffer \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\qbuffer.h
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\qbuffer.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\QTextCodec \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\qtextcodec.h
 
 debug\moc_mainwin.obj: debug\moc_mainwin.cpp 
 
