@@ -10,6 +10,7 @@
 #include<QGridLayout>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWin; }
+
 QT_END_NAMESPACE
 
 class MainWin : public QMainWindow
@@ -27,6 +28,8 @@ public:
     void newFile();
     void saveAsFile();
     void openSearch();
+    void search();
+    void searchBack();
 //    void showError(QString message);
     bool m_isTextChanged;
     void initMainEditor();

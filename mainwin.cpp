@@ -89,9 +89,10 @@ MainWin::MainWin(QWidget *parent)
             }
     );
 
-    //编辑
+    //编辑-查找
     QAction *search = pEdit->addAction("查找");
     connect(search,&QAction::triggered,this,&MainWin::openSearch);
+
     //工具
     QToolBar *toolBar = addToolBar("toolBar1");
     toolBar->addAction(pNew);
@@ -248,16 +249,45 @@ void MainWin::openSearch(){
     findDlg->sizeHint();
     findLineEdit = new QLineEdit(findDlg);
     QPushButton *btnFind= new QPushButton(tr("查找下一个"), findDlg);
-    QPushButton *btnCancole= new QPushButton(tr("取消"), findDlg);
+    QPushButton *btnFindBack= new QPushButton(tr("查找上一个"), findDlg);
 //    QVBoxLayout *layout= new QVBoxLayout(findDlg);
     QLabel *findText = new QLabel(this);
     findText->setText("查找内容");
     GridLayout->addWidget(findText,0,0);
     GridLayout->addWidget(findLineEdit,0,1);
-    GridLayout->addWidget(btnFind,1,1);
-    GridLayout->addWidget(btnCancole,2,1);
+    GridLayout->addWidget(btnFind,0,2);
+    GridLayout->addWidget(btnFindBack,1,2);
+//    GridLayout->addWidget(btnCancole,2,1);
+    connect(btnFind,&QPushButton::clicked,this,&MainWin::search);
+    connect(btnFindBack,&QPushButton::clicked,this,&MainWin::searchBack);
+
     findDlg->show();
 }
+
+void MainWin::search(){
+    QString str = findLineEdit->text();
+    qDebug()<<"str"<<str;
+    if(textEd.find(str)){
+        QPalette palette=textEd.palette();
+        palette.setColor(QPalette::Highlight,palette.color(QPalette::Active,QPalette::Highlight));
+        textEd.setPalette(palette);
+    }else{
+        QMessageBox::information(this,tr("注意"),tr("没有找到内容"),QMessageBox::Ok);
+    }
+}
+
+void MainWin::searchBack(){
+    QString str = findLineEdit->text();
+    qDebug()<<"str"<<str;
+    if(textEd.find(str,QTextDocument::FindBackward)){
+        QPalette palette=textEd.palette();
+        palette.setColor(QPalette::Highlight,palette.color(QPalette::Active,QPalette::Highlight));
+        textEd.setPalette(palette);
+    }else{
+        QMessageBox::information(this,tr("注意"),tr("没有找到内容"),QMessageBox::Ok);
+    }
+}
+
 int MainWin::showQueryMessage(QString message){
     QMessageBox msg(this);
 
@@ -310,4 +340,3 @@ MainWin::~MainWin()
 {
     delete ui;
 }
-

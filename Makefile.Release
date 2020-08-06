@@ -273,6 +273,17 @@ release\moc_mainwin.cpp: mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextcursor.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextformat.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QLineEdit \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QGridLayout \
 		release\moc_predefs.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\bin\moc.exe
 	C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include D:/QT/wedget/QtWindow_NotePad2020/release/moc_predefs.h -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/mkspecs/win32-msvc -ID:/QT/wedget/QtWindow_NotePad2020 -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtGui -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.12.8/5.12.8/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.17763.0\cppwinrt" mainwin.h -o release\moc_mainwin.cpp
@@ -416,6 +427,17 @@ release\main.obj: main.cpp mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextcursor.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextformat.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QLineEdit \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QGridLayout \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QApplication \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qapplication.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtCore\qcoreapplication.h \
@@ -540,6 +562,17 @@ release\mainwin.obj: mainwin.cpp mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextcursor.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qtextformat.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\qpen.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtGui\QCloseEvent \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QDialog \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QLineEdit \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlineedit.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QVBoxLayout \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qboxlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlayoutitem.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qgridlayout.h \
+		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QGridLayout \
 		ui_mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QMenuBar \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qmenubar.h \
@@ -558,8 +591,6 @@ release\mainwin.obj: mainwin.cpp mainwin.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qstatusbar.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QLabel \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qlabel.h \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QDialog \
-		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qdialog.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		C:\Qt\Qt5.12.8\5.12.8\msvc2017_64\include\QtWidgets\QFileDialog \
